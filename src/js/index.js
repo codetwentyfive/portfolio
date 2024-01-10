@@ -53,8 +53,6 @@ const resizeCanvas = () => {
 setInterval(draw, 30);
 window.addEventListener('resize', resizeCanvas);
 
-
-
 // Mouse Effect
 const mouseEffect = (event) => {
     let mouseX, mouseY;
