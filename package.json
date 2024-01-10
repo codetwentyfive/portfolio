@@ -4,7 +4,9 @@
   "description": "portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/codetwentyfive/portfolio/issues"
   },
-  "homepage": "https://github.com/codetwentyfive/portfolio#readme"
+  "homepage": "https://github.com/codetwentyfive/portfolio#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
 }
