@@ -12,18 +12,17 @@ const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const nums = '0123456789';
 const unicodeString = '☯☮♻♲⚛⚕✝✞✟✠☥☦☧☨☩☸✡☪☫☬☭';
 
-const alphabet = katakana + cyrillic + hangul + devanagari + latin + nums + unicodeString;
 
+const alphabet = katakana + cyrillic + hangul + devanagari + latin + nums + unicodeString;
 const fontSize = 16;
 const columns = canvas.width / fontSize;
-
 const rainDrops = [];
 
 
 for (let x = 0; x < columns; x++) {
     rainDrops[x] = 1;
 }
-
+//drawing the whole backdrop animation
 const draw = () => {
     context.fillStyle = 'rgba(0, 0, 0, 0.05)';
     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -83,3 +82,18 @@ window.addEventListener('touchmove', mouseEffect);
 window.addEventListener('touchend', mouseEffect);
 
 
+//Switch themes
+const backgroundSwitch = document.getElementById('backgroundSwitch');
+const matrixBackground = document.querySelector('.matrix-background');
+const body = document.body;
+
+backgroundSwitch.addEventListener('change', () => {
+    if (backgroundSwitch.checked) {
+        matrixBackground.style.display = 'none';
+        body.classList.add('dark-mode');
+
+    } else {
+        matrixBackground.style.display = 'block';
+        body.classList.remove('dark-mode');
+    }
+});
