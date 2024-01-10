@@ -53,6 +53,8 @@ const resizeCanvas = () => {
 setInterval(draw, 30);
 window.addEventListener('resize', resizeCanvas);
 
+
+
 // Mouse Effect
 const mouseEffect = (event) => {
     let mouseX, mouseY;
@@ -75,8 +77,11 @@ const mouseEffect = (event) => {
 };
 
 // Add event listeners for both mouse and touch events
-document.addEventListener('mousedown', mouseEffect);
-document.addEventListener('touchstart', mouseEffect);
 
-document.addEventListener('touchmove', mouseEffect);
-document.addEventListener('touchend', mouseEffect);
+
+window.addEventListener('mousemove', mouseEffect);
+window.addEventListener('touchstart', mouseEffect);
+window.addEventListener('touchmove', mouseEffect);
+window.addEventListener('touchend', mouseEffect);
+
+
