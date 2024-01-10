@@ -55,8 +55,18 @@ window.addEventListener('resize', resizeCanvas);
 
 // Mouse Effect
 const mouseEffect = (event) => {
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
+    let mouseX, mouseY;
+
+    // Check if it's a touch event
+    if (event.touches && event.touches.length > 0) {
+        mouseX = event.touches[0].clientX;
+        mouseY = event.touches[0].clientY;
+    }
+    // If it's a mouse event
+    else {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+    }
 
     const dropIndex = Math.floor(mouseX / fontSize);
     if (dropIndex >= 0 && dropIndex < rainDrops.length) {
@@ -64,6 +74,9 @@ const mouseEffect = (event) => {
     }
 };
 
+// Add event listeners for both mouse and touch events
+document.addEventListener('mousedown', mouseEffect);
+document.addEventListener('touchstart', mouseEffect);
 
-window.addEventListener('mousemove', mouseEffect);
-
+document.addEventListener('touchmove', mouseEffect);
+document.addEventListener('touchend', mouseEffect);
