@@ -3,7 +3,7 @@ const context = canvas.getContext('2d');
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-
+//all the unicode & letters for the rain animation
 const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
 const cyrillic = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
 const hangul = 'ㄱㄲㄳㄴㄵㄶㄷㄸㄹㄺㄻㄼㄽㄾㄿㅀㅁㅂㅃㅄㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ';
@@ -12,9 +12,9 @@ const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const nums = '0123456789';
 const unicodeString = '☯☮♻♲⚛⚕✝✞✟✠☥☦☧☨☩☸✡☪☫☬☭';
 
-
+//the ultimate alphabet!
 const alphabet = katakana + cyrillic + hangul + devanagari + latin + nums + unicodeString;
-const fontSize = 16;
+const fontSize = 8;
 const columns = canvas.width / fontSize;
 const rainDrops = [];
 
