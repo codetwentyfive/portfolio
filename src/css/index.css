@@ -3,10 +3,9 @@ html {
   font-size: 16px;
 }
 @font-face {
-  font-family: 'Matrix'; 
-  src: url('../../public/fonts/matrix.ttf') format('truetype');
+  font-family: "Matrix";
+  src: url("../../public/fonts/matrix.ttf") format("truetype");
 }
-
 
 *,
 *:before,
@@ -37,7 +36,6 @@ ul {
   font-family: "Playfair";
   color: #ffffff;
 }
-
 
 .glass-effect {
   background: rgba(255, 255, 255, 0.1);
@@ -243,7 +241,7 @@ h1.name {
 }
 
 div.main-photo-container {
-  background-image: url('../../public/images/pfp.jpg');
+  background-image: url("../../public/images/pfp.jpg");
   background-position: 0 -300px;
   max-width: 550px;
   min-height: 550px;
@@ -274,10 +272,10 @@ section.about-me h2 {
 
 .icon:hover {
   transform: scale(1.4);
-  filter: invert(56%) sepia(100%) saturate(580%) hue-rotate(80deg) brightness(110%) contrast(110%);
+  filter: invert(56%) sepia(100%) saturate(580%) hue-rotate(80deg)
+    brightness(110%) contrast(110%);
+  cursor: pointer;
 }
-
-
 
 div.icon-container {
   padding-top: 20px;
@@ -306,7 +304,7 @@ main div.project-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 40px;
-justify-items: center;
+  justify-items: center;
 }
 
 section.project {
@@ -316,10 +314,10 @@ section.project {
   transition: transform 0.3s ease-in-out;
 }
 
-
 section.project:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+  cursor: pointer;
 }
 
 section.project div.content {
@@ -422,6 +420,9 @@ footer div.telephone {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+html body footer.glass-effect div.contact section#contact p img.icon:hover {
+  transform: rotate(360deg);
 }
 
 .filter-white {
