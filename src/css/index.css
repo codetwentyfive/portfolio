@@ -2,6 +2,11 @@ html {
   box-sizing: border-box;
   font-size: 16px;
 }
+@font-face {
+  font-family: 'Matrix'; 
+  src: url('/public/fonts/matrix.ttf') format('truetype');
+}
+
 
 *,
 *:before,
@@ -32,6 +37,7 @@ ul {
   font-family: "Playfair";
   color: #ffffff;
 }
+
 
 .glass-effect {
   background: rgba(255, 255, 255, 0.1);
@@ -131,6 +137,7 @@ h1 {
 
 h2 {
   font-size: 3.5rem;
+  font-family: Matrix;
 }
 
 h3 {
@@ -302,10 +309,13 @@ section.project {
   box-shadow: 2px 7px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
 }
+
+
 section.project:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
 }
+
 section.project div.content {
   padding-left: 30px;
   padding-right: 30px;
