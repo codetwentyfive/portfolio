@@ -238,7 +238,7 @@ h1.name {
 }
 
 div.main-photo-container {
-  background-image: url("./public/images/pfp.jpg");
+  background-image: url("/public/images/pfp.jpg");
   background-position: 0 -300px;
   max-width: 550px;
   min-height: 550px;
