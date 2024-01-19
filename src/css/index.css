@@ -174,7 +174,6 @@ section.about-me {
   margin-left: 90px;
   margin-top: 60px;
   margin-right: 60px;
-  z-index: -1;
 }
 
 @media (max-width: 1024px) {
@@ -265,13 +264,20 @@ section.about-me h2 {
   padding-bottom: 30px;
 }
 
-img.icon {
-  width: 48px;
-  height: 48px;
-
+.icon {
+  width: 36px;
+  height: 36px;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(183deg)
     brightness(106%) contrast(106%);
+  transition: transform 0.2s ease-in-out, filter 0s ease-in-out;
 }
+
+.icon:hover {
+  transform: scale(1.4);
+  filter: invert(56%) sepia(100%) saturate(580%) hue-rotate(80deg) brightness(110%) contrast(110%);
+}
+
+
 
 div.icon-container {
   padding-top: 20px;
